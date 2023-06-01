@@ -1,12 +1,21 @@
 const Hapi = require('@hapi/hapi');
 const routes = require('./routes');
+const cors = require('cors');
 
 
 const init = async () => {
     const server = Hapi.server({
         port: 5000,
         host: '0.0.0.0',
+        routes: {
+            "cors": {
+                "origin": ["http://localhost:3000", "http://backend-sistem-906-v1-env.eba-zmizyni3.ap-southeast-2.elasticbeanstalk.com"],
+                "headers": ["Accept", "Content-Type"],
+                "additionalHeaders": ["X-Requested-With"]
+            }
+        }
     });
+    
     
     server.route(routes);
 
