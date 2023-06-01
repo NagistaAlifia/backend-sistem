@@ -8,9 +8,16 @@ const routes = [
     },
     {
         method: 'GET',
+        path: '/about',
+        handler: (request, h) => {
+            return 'About - Nagista Alifia Handesaputri - 3120510901';
+        },
+    },
+    {
+        method: 'GET',
         path: '/',
         handler: (request, h) => {
-            return 'Homepage';
+            return 'Homepage - Nagista Alifia Handesaputri - 3120510901';
         },
     },
 ];
