@@ -9,7 +9,7 @@ const init = async () => {
         host: '0.0.0.0',
         routes: {
             "cors": {
-                "origin": ["http://localhost:3000", "http://backend-sistem-906-v1-env.eba-zmizyni3.ap-southeast-2.elasticbeanstalk.com"],
+                "origin": ["http://localhost:3000", "http://backend-sistem-906-v1-env.eba-zmizyni3.ap-southeast-2.elasticbeanstalk.com", "http://nagista-alifia-906-fe.s3-website-ap-southeast-2.amazonaws.com"],
                 "headers": ["Accept", "Content-Type"],
                 "additionalHeaders": ["X-Requested-With"]
             }
